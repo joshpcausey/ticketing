@@ -1,8 +1,11 @@
 import buildClient from '../api/build-client';
 
-const Landing = (props) => {
-  console.log(props);
-  return <h1>Landing Page</h1>;
+const Landing = ({ currentUser }) => {
+  return currentUser ? (
+    <h1>You are signed in</h1>
+  ) : (
+    <h1>You are not signed in</h1>
+  );
 };
 
 export const getServerSideProps = async (context) => {
