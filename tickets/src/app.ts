@@ -3,6 +3,7 @@ import 'express-async-errors';
 import { json } from 'body-parser';
 import { showTicketRouer } from './routes/show';
 import { indexTicketRouter } from './routes';
+import { updateTicketRouter } from './routes/update';
 
 import cookieSession from 'cookie-session';
 
@@ -25,7 +26,12 @@ app.use(
 
 app.use(currentUser);
 
-app.use(createTicketRouter, showTicketRouer, indexTicketRouter);
+app.use(
+  createTicketRouter,
+  showTicketRouer,
+  indexTicketRouter,
+  updateTicketRouter
+);
 
 app.all('*', async (req, res, next) => {
   throw new NotFoundError();
