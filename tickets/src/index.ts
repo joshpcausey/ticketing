@@ -7,13 +7,13 @@ const start = async () => {
   }
 
   try {
-    await mongoose.connect('mongodb://auth-mongo-srv:27017/auth');
-    console.log('connected to mongodb');
+    await mongoose.connect('mongodb://tickets-mongo-srv:27017/tickets');
+    console.log('tickets connected to mongodb');
   } catch (err) {
     console.error(err);
   }
   app.listen(3000, () => {
-    console.log('auth listening on port 3000');
+    console.log('tickets listening on port 3000');
   });
 };
 
