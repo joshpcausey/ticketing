@@ -15,6 +15,13 @@ spec:
       containers:
         - name: auth
           image: joshcausey/auth
+          # resources:
+          #   requests:
+          #     memory: '64Mi'
+          #     cpu: '500m'
+          #   limits:
+          #     memory: '128Mi'
+          #     cpu: '500m'
           env:
             - name: MONGO_URI
               value: mongodb://auth-mongo-srv:27017/auth
@@ -23,6 +30,7 @@ spec:
                 secretKeyRef:
                   name: jwt-secret
                   key: JWT_KEY
+
 ---
 apiVersion: v1
 kind: Service
