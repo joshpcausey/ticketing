@@ -1,5 +1,6 @@
 import mongoose, { Mongoose } from 'mongoose';
 import { OrderStatus } from '@joshuacauseytickets/common';
+import { TicketDoc } from './ticket';
 
 interface OrderAttrs {
   userId: string;
@@ -14,6 +15,8 @@ interface OrderDoc extends mongoose.Document {
   expiresAt: Date;
   ticket: TicketDoc;
 }
+
+export { OrderStatus };
 
 interface OrderModel extends mongoose.Model<OrderDoc> {
   build(attrs: OrderAttrs): OrderDoc;
