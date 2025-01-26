@@ -28,3 +28,5 @@ it('Marks an order as cancelled', async () => {
 
   expect(updateOrder?.status).toEqual(OrderStatus.Cancelled);
 });
+
+it.todo('emits an order cancelled event');
