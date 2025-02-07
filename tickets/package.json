@@ -24,7 +24,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.0",
     "node-nats-streaming": "^0.3.2",
-    "@joshuacauseytickets/common": "1.0.17"
+    "@joshuacauseytickets/common": "1.0.18"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",

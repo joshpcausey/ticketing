@@ -17,7 +17,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@joshuacauseytickets/common": "1.0.17",
+    "@joshuacauseytickets/common": "1.0.18",
     "@types/node": "^22.10.2",
     "cookie-session": "^2.1.0",
     "express": "^4.21.2",
